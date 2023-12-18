@@ -1,4 +1,4 @@
-// PATH: 'express-react/backend/server.js'
+// PATH: 'JOYFUL-JINGLES/express-react/backend/server.js'
 
 ///////////////////////////////
 // DEPENDENCIES
@@ -13,11 +13,12 @@ const { PORT } = process.env;
 
 // import express
 const express = require("express");
-const app = express();
-const usersRouter = require('./routes/users.jsx')
-
+const mongoose = require("mongoose")
 const cors = require("cors")
 const morgan = require("morgan")
+const usersRouter = require('./routes/users.jsx')
+
+const app = express();
 
 ///////////////////////////////
 // MIDDLEWARE
@@ -31,13 +32,19 @@ app.use(morgan("dev")); // logging for development
 // all requests for endpoints that begin with '/users'
 app.use('/users', usersRouter)
 
+// mongoose connection
+
+mongoose.connect(process.env.DATABASE_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 ///////////////////////////////
 // ROUTES
 ////////////////////////////////
 // create a test route
 app.get("/", (req, res) => {
-    res.send("JOYFUL JINGLES");
+    res.send("JOYFUL JiNgLeS");
 });
 
 ///////////////////////////////

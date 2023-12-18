@@ -1,13 +1,11 @@
-// /controllers/users.jsx
+// PATH: 'JOYFUL-JINGLES/express-react/backend/controllers/users.jsx'
 
 ///////////////////////////////
 // DEPENDENCIES
 ////////////////////////////////
 
 const express = require('express')
-const {users} = require('../models/user.jsx')
-// we can use 'object de-structuring' to access just the model we need for this controller
-
+const {users} = require('../models/user')
 
 ///////////////////////////////
 // CONTROLLERS
@@ -28,9 +26,9 @@ async function index(req,res,next) {
 async function create(req,res,next) {
   try {
     // create new user
-    res.json(await users.create(req.body));
+    const newUser = await users.create(req.body);
+    res.json(newUser);
   } catch (error) {
-    //send error
     res.status(400).json(error);
   }
 };

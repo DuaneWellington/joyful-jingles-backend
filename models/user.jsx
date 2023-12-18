@@ -1,3 +1,4 @@
+// PATH: 'JOYFUL-JINGLES/express-react/backend/models/user.jsx'
 
 
 ///////////////////////////////
@@ -13,7 +14,6 @@ const UserSchema = new Schema({
   type: String,
   required: true,
   unique: true,
-
 },
 email: {
     type: String,
@@ -24,19 +24,17 @@ email: {
     type: String,
     required: true,
   },
-  googleId: {
-    type: String,
-    unique: true,
-  },
-  // Additional fields related to Google OAuth
-  googleAccessToken: {
-    type: String,
-  },
-  googleRefreshToken: {
-    type: String,
-  },
-  // You can add more fields based on your application's requirements
-  // For example, 'firstName', 'lastName', 'createdAt', etc.
+//   googleId: {
+//     type: String,
+//     unique: true,
+//   },
+//   // Additional fields related to Google OAuth
+//   googleAccessToken: {
+//     type: String,
+//   },
+//   googleRefreshToken: {
+//     type: String,
+//   },
 });
 
 const User = mongoose.model('User', UserSchema);

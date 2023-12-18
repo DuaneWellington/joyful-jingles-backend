@@ -1,4 +1,5 @@
-// ./routes/users.jsx
+// PATH: 'JOYFUL-JINGLES/express-react/backend/routes/users.jsx'
+
 
 ///////////////////////////////
 // DEPENDENCIES
@@ -6,8 +7,8 @@
 
 const express = require('express');
 const router = express.Router();
-const usersCtrl = require('../controllers/users.jsx')
-const { auth } = require('express-openid-connect');
+const usersCtrl = require('../controllers/users')
+// const { auth } = require('express-openid-connect');
 
 
 ///////////////////////////////
