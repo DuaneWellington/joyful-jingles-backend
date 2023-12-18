@@ -13,10 +13,7 @@ const { PORT } = process.env;
 
 // import express
 const express = require("express");
-
-// create application object
 const app = express();
-
 const usersRouter = require('./routes/users.jsx')
 
 const cors = require("cors")

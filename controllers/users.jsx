@@ -5,7 +5,7 @@
 ////////////////////////////////
 
 const express = require('express')
-const {users} = require('../models')
+const {users} = require('../models/user.jsx')
 // we can use 'object de-structuring' to access just the model we need for this controller
 
 

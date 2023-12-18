@@ -8,7 +8,7 @@ const Schema = mongoose.Schema
 ///////////////////////////////
 // MODELS
 ////////////////////////////////
-const UsersSchema = new Schema({
+const UserSchema = new Schema({
     username: {
   type: String,
   required: true,
@@ -39,6 +39,6 @@ email: {
   // For example, 'firstName', 'lastName', 'createdAt', etc.
 });
 
-const User = mongoose.model('User', UsersSchema);
+const User = mongoose.model('User', UserSchema);
 
 module.exports = User;
