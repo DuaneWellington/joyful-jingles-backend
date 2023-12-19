@@ -24,17 +24,17 @@ email: {
     type: String,
     required: true,
   },
-//   googleId: {
-//     type: String,
-//     unique: true,
-//   },
-//   // Additional fields related to Google OAuth
-//   googleAccessToken: {
-//     type: String,
-//   },
-//   googleRefreshToken: {
-//     type: String,
-//   },
+  googleId: {
+    type: String,
+    unique: true,
+  },
+  // Additional fields related to Google OAuth
+  googleAccessToken: {
+    type: String,
+  },
+  googleRefreshToken: {
+    type: String,
+  },
 });
 
 const User = mongoose.model('User', UserSchema);
